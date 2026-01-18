@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechWeb</title>
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    
+<body class="font-inter">
+    <!-- navigation section start -->
+    <nav class="navigation">
+        <div class="container display-flex justify-content-between align-items-center">
+            <!-- logo -->
+            <h3 class="navbar-brand">Tech<span>Web</span></h3>
+            
+            <!-- nav list -->
+            <ul class="nav-list display-flex align-items-center">
+                <li class="nav-item"><a class="nav-link text-gray" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-gray" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link text-gray" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link text-gray" href="#">Login</a></li>
+            </ul>
+            
+            <!-- navigation button -->
+            <button class="button-primary display-flex align-items-center" aria-label="Primary Button">
+                <span>Subscribe</span> <i class="fas fa-arrow-right"></i>
+            </button>
+            
+            <!-- hamburger icon for mobile -->
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <img src="./assets/hamburger-menu.png" alt="Hamburger menu con">
+            </button>
+        </div>
+    </nav>
 </body>
 </html>

@@ -14,6 +14,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --white-color: #ffffff;
+    --green-color: #00FF88;
+    --dark: #1A0B2E;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -23,11 +29,35 @@ a {
     color: inherit;
 }
 
+ul {
+    list-style: none;
+}
+
+p {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.button-primary {
+    background: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
+    border: none;
+    border-radius: 1000px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    gap: 4px;
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.25rem;
 }
 
 .display-flex {
@@ -50,3 +80,98 @@ a {
     text-align: center;
 }
 
+
+/* Navbar styles */
+.navigation {
+    background-color: var(--dark);
+    color: var(--white-color);
+    padding: 1.5rem 0;
+}
+
+.navigation .nav-list {
+    gap: 2rem;
+}
+
+.navbar-brand {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+/*=======================
+Responsive styles
+=========================*/
+/* small device */
+@media screen and (max-width: 576px) {
+    /* Navbar styles */
+    .menu-toggle {
+        display: block;
+    }
+
+    .navigation .container {
+        position: relative;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        overflow: hidden;
+        left: 0;
+        background-color: var(--dark);
+        padding: 2rem;
+    }
+
+    .navigation .button-primary {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    /* Navbar styles */
+    .menu-toggle {
+        display: block;
+    }
+
+    .navigation .container {
+        position: relative;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        overflow: hidden;
+        left: 0;
+        background-color: var(--dark);
+        padding: 0;
+        height: 0;
+    }
+
+    #active {
+        padding: 2rem;
+        height: auto;
+    }
+
+    .navigation .button-primary {
+        display: none;
+    }
+}
