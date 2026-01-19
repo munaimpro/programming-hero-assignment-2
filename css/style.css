@@ -262,7 +262,9 @@ main>section, footer {
 }
 
 .why-choose-content .why-choose-text,
-.host-card .host-details {
+.host-card .host-details,
+.episode-details .episode-description,
+.episode-duration span {
     line-height: 1.5rem;
 }
 
@@ -296,7 +298,56 @@ main>section, footer {
 }
 
 
+/* featured episode section style */
+.episode-container {
+    gap: 30px;
+}
+
+.episode-container .episode-card {
+    background-color: #250D44;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.episode-card .episode-video {
+    min-height: 215px;
+}
+
+.episode-card .episode-details {
+    padding: 1.5rem;
+}
+
+.episode-details>* {
+    margin-bottom: 12px;
+}
+
+.episode-details .episode-title {
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.episode-details .episode-duration {
+    gap: 6px;
+}
+
+.episode-duration img {
+    width: 20px;
+    height: 20px;
+}
+
+.episode-duration span {
+    color: var(--green-color);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
 /* host section style */
+#host {
+    padding-top: 0px;
+}
+
 .host-card {
     background-color: rgba(53, 17, 101, 0.4);
     border-radius: 2.5rem;
@@ -360,8 +411,6 @@ footer .footer-social {
 }
 
 
-
-
 /*=======================
 Responsive styles
 =========================*/
@@ -369,6 +418,12 @@ Responsive styles
 @media screen and (max-width: 576px) {
     main>section {
         padding: 2.5rem 0;
+    }
+
+    .nav-list,
+    .episode-container,
+    .host-card {
+        flex-direction: column;
     }
 
     /* Navbar styles */
@@ -385,7 +440,6 @@ Responsive styles
     }
 
     .nav-list {
-        flex-direction: column;
         position: absolute;
         top: 80px;
         width: 100%;
@@ -441,7 +495,6 @@ Responsive styles
 
     /* host section style */
     .host-card {
-        flex-direction: column;
         justify-content: center;
         text-align: center;
     }
@@ -453,13 +506,18 @@ Responsive styles
     /* footer section style */
     footer .footer-social {
         gap: 1rem;
-        
     }
 }
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
     main>section {
         padding: 2.5rem 0;
+    }
+
+    .nav-list,
+    .episode-container,
+    .host-card {
+        flex-direction: column;
     }
 
     /* Navbar styles */
@@ -472,7 +530,6 @@ Responsive styles
     }
 
     .nav-list {
-        flex-direction: column;
         position: absolute;
         top: 80px;
         width: 100%;
