@@ -333,7 +333,7 @@ main>section, footer {
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     transform: translate(-50%, -50%);
     color: var(--white-color);
     border-radius: 50%;
@@ -407,9 +407,9 @@ main>section, footer {
 /* footer section style */
 footer {
     background-image: url('../assets/footer-bg.png');
-    background-position: center;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 footer .navbar-brand {
@@ -418,6 +418,8 @@ footer .navbar-brand {
 }
 
 footer .footer-social {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
     margin-bottom: 2rem;
     gap: 2.5rem;
     flex-wrap: wrap;
@@ -489,6 +491,11 @@ Responsive styles
         height: 250px;
     }
 
+    .banner-icon #badge {
+        top: 0;
+        right: 0;
+    }
+
     .banner-button button {
         font-size: 12px;
     }
@@ -513,6 +520,10 @@ Responsive styles
     }
 
     /* Why choose section styles */
+    .why-choose-content .why-choose-item {
+        padding: 1.5rem;
+    }
+
     .why-choose-content {
         grid-template-areas:
             "premium-quality"
@@ -520,6 +531,18 @@ Responsive styles
             "global-community"
             "exclusive-interviews"
             "rich-resources";
+    }
+
+    /* featured episode sectioon style */
+    .episode-details .episode-title {
+        font-size: 20px;
+    }
+
+    .episode-details .episode-description {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
     }
 
     /* host section style */
