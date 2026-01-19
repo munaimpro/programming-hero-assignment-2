@@ -17,11 +17,15 @@
 :root {
     --white-color: #ffffff;
     --green-color: #00FF88;
-    --dark: #1A0B2E;
+    --dark-color: #1A0B2E;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark-color);
 }
 
 a {
@@ -85,10 +89,17 @@ button {
     text-align: center;
 }
 
+.section-title {
+    color: var(--white-color);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2.8rem;
+}
+
 
 /* Navbar styles */
 .navigation {
-    background-color: var(--dark);
+    background-color: var(--dark-color);
     border-bottom: 1px solid #412567;
     color: var(--white-color);
     padding: 1.5rem 0;
@@ -131,7 +142,7 @@ button {
 
 .banner-content {
     max-width: 550px;
-    margin: 0 auto;
+    margin: 100px auto;
     text-align: center;
     color: var(--white-color);
 }
@@ -153,7 +164,7 @@ button {
     top: 10px;
     right: 15px;
     background-color: var(--green-color);
-    color: var(--dark);
+    color: var(--dark-color);
     padding: 8px 16px;
     font-size: 18px;
     font-weight: 600;
@@ -174,6 +185,47 @@ button {
 .banner-content .banner-button {
     gap: 8px;
 }
+
+
+/* about section style */
+#about {
+    background-color: var(--dark-color);
+    padding: 50px 0px 120px 0px;
+}
+
+.about-info {
+    padding-bottom: 5rem;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+.about-info .section-title {
+    margin-bottom: 1rem;
+}
+
+.about-info .section-descripton,
+.stat-item .stat-text {
+    line-height: 1.25rem;
+}
+
+.about-stat {
+    padding: 5rem 0 7.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+.about-stat .stat-item .stat-number {
+    color: var(--green-color);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.stat-item .stat-text {
+    text-transform: uppercase;
+}
+
+
 
 
 /*=======================
@@ -201,7 +253,7 @@ Responsive styles
         width: 100%;
         overflow: hidden;
         left: 0;
-        background-color: var(--dark);
+        background-color: var(--dark-color);
         padding: 2rem;
         display: none;
     }
@@ -217,6 +269,24 @@ Responsive styles
 
     .banner-button button {
         font-size: 12px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .about-info {
+        padding-bottom: 2.5rem;
+    }
+
+    .about-stat {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2.5rem 0;
+        gap: 2.5rem;
+    }
+
+    .stat-item .stat-text {
+        font-size: .95rem;
     }
 }
 
@@ -237,7 +307,7 @@ Responsive styles
         width: 100%;
         overflow: hidden;
         left: 0;
-        background-color: var(--dark);
+        background-color: var(--dark-color);
         padding: 0;
         height: 0;
     }
@@ -249,5 +319,10 @@ Responsive styles
 
     .navigation .button-primary {
         display: none;
+    }
+
+    .about-stat {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
     }
 }
