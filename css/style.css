@@ -89,6 +89,10 @@ button {
     text-align: center;
 }
 
+main>section {
+    padding: 7.5rem 0;
+}
+
 .section-title {
     color: var(--white-color);
     font-size: 3rem;
@@ -112,6 +116,12 @@ button {
 .navbar-brand {
     font-size: 3rem;
     font-weight: 700;
+}
+
+.navbar-brand span {
+    background: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
+    background-clip: text;
+    color: transparent;
 }
 
 .nav-link {
@@ -138,6 +148,7 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    padding: 0;
 }
 
 .banner-content {
@@ -203,7 +214,8 @@ button {
 }
 
 .about-info .section-descripton,
-.stat-item .stat-text {
+.stat-item .stat-text,
+.host-card .host-details {
     line-height: 1.25rem;
 }
 
@@ -226,10 +238,9 @@ button {
 }
 
 
-/* why choose styles */
+/* why choose section styles */
 #why-choose {
     background-color: #230E3D;
-    padding: 120px 0;
 }
 
 .why-choose-content .why-choose-item {
@@ -283,6 +294,31 @@ button {
 }
 
 
+/* host section style */
+.host-card {
+    gap: 1.5rem;
+    padding: 2.5rem;
+}
+
+.host-card .host-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+.host-card .host-contact {
+    gap: .5rem;
+    margin-top: 1rem;
+}
+
+.host-contact .social-link .icon {
+    border: 1px solid #533C72;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
 
 
 
@@ -292,6 +328,10 @@ Responsive styles
 =========================*/
 /* small device */
 @media screen and (max-width: 576px) {
+    main>section {
+        padding: 2.5rem 0;
+    }
+
     /* Navbar styles */
     .menu-toggle {
         display: block;
@@ -362,6 +402,10 @@ Responsive styles
 }
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
+    main>section {
+        padding: 2.5rem 0;
+    }
+
     /* Navbar styles */
     .menu-toggle {
         display: block;
@@ -381,11 +425,6 @@ Responsive styles
         background-color: var(--dark-color);
         padding: 0;
         height: 0;
-    }
-
-    #active {
-        padding: 2rem;
-        height: auto;
     }
 
     .navigation .button-primary {
