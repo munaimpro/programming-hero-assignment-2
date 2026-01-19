@@ -93,7 +93,7 @@ button {
     color: var(--white-color);
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 2.8rem;
+    margin-bottom: 2.5rem;
 }
 
 
@@ -226,6 +226,65 @@ button {
 }
 
 
+/* why choose styles */
+#why-choose {
+    background-color: #230E3D;
+    padding: 120px 0;
+}
+
+.why-choose-content .why-choose-item {
+    background-color: rgb(53, 17, 101, 0.4);
+    border-radius: 40px;
+    padding: 2.5rem;
+}
+
+.why-choose-item img {
+    margin-bottom: 1rem;
+}
+
+.why-choose-item .why-choose-title {
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.why-choose-content .why-choose-text {
+    line-height: 1.5rem;
+}
+
+.premium-quality {
+    grid-area: premium-quality;
+}
+
+.mobile-friendly {
+    grid-area: mobile-friendly;
+}
+
+.global-community {
+    grid-area: global-community;
+}
+
+.exclusive-interviews {
+    grid-area: exclusive-interviews;
+}
+
+.rich-resources {
+    grid-area: rich-resources;
+}
+
+.why-choose-content {
+    display: grid;
+    gap: 30px;
+    grid-template-areas:
+        "premium-quality mobile-friendly mobile-friendly"
+        "premium-quality global-community global-community"
+        "exclusive-interviews exclusive-interviews rich-resources";
+}
+
+
+
+
 
 
 /*=======================
@@ -262,6 +321,7 @@ Responsive styles
         display: none;
     }
 
+    /* Banner styles */
     .banner-content .banner-icon {
         width: 250px;
         height: 250px;
@@ -275,6 +335,7 @@ Responsive styles
         font-size: 2rem;
     }
 
+    /* About section styles */
     .about-info {
         padding-bottom: 2.5rem;
     }
@@ -287,6 +348,16 @@ Responsive styles
 
     .stat-item .stat-text {
         font-size: .95rem;
+    }
+
+    /* Why choose section styles */
+    .why-choose-content {
+        grid-template-areas:
+            "premium-quality"
+            "mobile-friendly"
+            "global-community"
+            "exclusive-interviews"
+            "rich-resources";
     }
 }
 
@@ -324,5 +395,15 @@ Responsive styles
     .about-stat {
         grid-template-columns: repeat(2, 1fr);
         gap: 2.5rem;
+    }
+    
+    /* Why choose section styles */
+    .why-choose-content {
+        grid-template-areas:
+            "premium-quality"
+            "mobile-friendly"
+            "global-community"
+            "exclusive-interviews"
+            "rich-resources";
     }
 }
