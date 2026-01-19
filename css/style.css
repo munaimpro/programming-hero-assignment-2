@@ -89,7 +89,7 @@ button {
     text-align: center;
 }
 
-main>section {
+main>section, footer {
     padding: 7.5rem 0;
 }
 
@@ -114,6 +114,7 @@ main>section {
 }
 
 .navbar-brand {
+    color: var(--white-color);
     font-size: 3rem;
     font-weight: 700;
 }
@@ -260,7 +261,8 @@ main>section {
     margin-bottom: 1rem;
 }
 
-.why-choose-content .why-choose-text {
+.why-choose-content .why-choose-text,
+.host-card .host-details {
     line-height: 1.5rem;
 }
 
@@ -296,6 +298,8 @@ main>section {
 
 /* host section style */
 .host-card {
+    background-color: rgba(53, 17, 101, 0.4);
+    border-radius: 2.5rem;
     gap: 1.5rem;
     padding: 2.5rem;
 }
@@ -319,6 +323,41 @@ main>section {
     height: 40px;
 }
 
+
+/* footer section style */
+footer {
+    background-image: url('../assets/footer-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-position: center;
+}
+
+footer .navbar-brand {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+footer .footer-social {
+    margin-bottom: 2rem;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    font-weight: 600;
+}
+
+.footer-social .social-link {
+    gap: .5rem;
+}
+
+.footer-social .social-link img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.footer-social .social-link .media-name {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+
+}
 
 
 
@@ -398,6 +437,23 @@ Responsive styles
             "global-community"
             "exclusive-interviews"
             "rich-resources";
+    }
+
+    /* host section style */
+    .host-card {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .host-card .host-contact {
+        justify-content: center;
+    }
+
+    /* footer section style */
+    footer .footer-social {
+        gap: 1rem;
+        
     }
 }
 
