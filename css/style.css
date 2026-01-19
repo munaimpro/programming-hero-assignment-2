@@ -329,6 +329,10 @@ main>section, footer {
     position: relative;
 }
 
+.episode-video iframe {
+    pointer-events: none;
+}
+
 .episode-video .play-button {
     position: absolute;
     top: 50%;
